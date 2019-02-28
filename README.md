@@ -9,8 +9,8 @@ The goal of the  ODC Labs environment is to develop and test new features for im
 
 CSIRO as a founding member of the ODC and a science organisation hosts the ODC Labs on behalf of the ODC community. This isn't a separate initiative to the ODC production area but a fully integrated part of the ecosystem. The separate hosting is simply to help reduce confusion in the production area and to support creative new directions and innovation in a collaborative environment. 
 
-**You or your organisation are welcome to propose an ODC Labs project or get involved in an existing one. All ODC community members are welcome to participate.
-- Contact the [CSIRO EASI core team](https://github.com/orgs/csiro-easi/teams/easi-core) to get started.**
+**You or your organisation are welcome to propose an ODC Labs project or get involved in an existing one. All ODC community members are welcome to participate.**
+- **Contact the [CSIRO EASI core team](https://github.com/orgs/csiro-easi/teams/easi-core) to get started.**
 
 You can find a list of current ODC Labs projects on the [Projects tab of this repository](https://github.com/csiro-easi/opendatacube-labs-docs/projects). Each contains a description of the project and all ODC Labs repositories and projects are pre-fixed by "opendataube-labs". 
 
