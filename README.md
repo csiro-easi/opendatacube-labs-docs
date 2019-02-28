@@ -1,11 +1,33 @@
 [ee]: https://github.com/csiro-easi/opendatacube-labs-docs/blob/master/images/Execution_Engine.png "Execution Engine (EE)"
 [s3aio]: https://github.com/csiro-easi/opendatacube-labs-docs/blob/master/images/S3AIO.png "S3 Array IO (s3aio)"
 
-# ODC labs
+# Open Data Cube Labs
+__Developing features and extensions related to the ODC code-base that may or may not be incorporated into the ODC in the future.__
 
 ## Rationale
+The goal of the  ODC Labs environment is to develop and test new features for improving or adapting the ODC that may involve breaking, experimental or otherwise extensive changes not suited to the [production ODC code base](https://github.com/opendatacube) and the [community](https://www.opendatacube.org/) it supports. Improvements and adaptations may include speed, ease of use, memory performance, adaptability, modularity, API changes and so on.
 
-...
+CSIRO as a founding member of the ODC and a science organisation hosts the ODC Labs on behalf of the ODC community. This isn't a separate initiative to the ODC production area but a fully integrated part of the ecosystem. The separate hosting is simply to help reduce confusion in the production area and to support creative new directions and innovation in a collaborative environment. 
+
+**You or your organisation are welcome to propose an ODC Labs project or get involved in an existing one. All ODC community members are welcome to participate.
+- Contact the [CSIRO EASI core team](https://github.com/orgs/csiro-easi/teams/easi-core) to get started.**
+
+Research and operational agencies may choose to adopt new features from the ODC Labs when the new features can be shown to work better for their deployment(s). There is no expectation, nor requirement, that any or all ODC Labs features will be adopted into the production open data cube code. Indeed, the nature of an experimental test-bed is that backwards-compatibility may well be broken in the advance of new or bespoke features.
+
+To help get your creative juices thinking here are a range of ODC Labs projects people are thinking about:
++ Linking computational modelling and the ODC for forecasting events
++ Machine learning
++	Feature detection and feature based API
++	Interoperability challenges between EO Data Cubes
++	Algorithms for generating decision-ready products
++ Multi-sensor data integration and analysis
++ Hyperspectral and SAR analysis
++ New innovative tools and solutions to work with EO Data Cubes
++ Support for high resolution EO data
++ Cloud-based computation and storage models
++ Architecture design of EO Data Cubes (HPC, Distributed Computing, Super Computers)
++ Multi-source and destination data cache management for organisation deployments 
+
 
 # CSIRO ODC
 
@@ -21,23 +43,6 @@ To make this happen, we need the following:
   4. API - a simple user-friendly interface to the system.
      - Not implemented
 
-## S3 Array IO (s3aio)
-
-![alt text][s3aio]
-
-Our approach stores only the raw array data in chunked form and distributed across a distributed key-value store such as S3.
-We do this to decouple the metadata and internal b-tree index typically found in EO file formats (e.g. NetCDF/HDF/GeoTIFF).
-This decoupling enables us to store the metadata and internal index elsewhere e.g. in a distributed ndindex and allow us more freedom to serve the data to distributed storage to improved IO scalability and performance. This decoupling also ensures the stored data is in a Compute Ready Data format (CRD) that can be readily used natively by CPUs/GPUs/FPGAs.
-
-### What advantages does this provide?
- - IO Performance - Array IO for read and write can happen massively in parallel.
- - Efficient write IO - A bit change only results in 1 small IO as opposed to many IOs to upload the entire ndarray if the array is stored as one object in S3.
- - Efficient Array operations - Array Operations are inherently mapped to distributed storage by default and there is no need to retrieve metadata from each object to compute what bytes to retrieve.
- - Search Performance - All Array data can be represented as one virtual sparse ndarray but actually distributed across S3.
- - Compute Ready Data format - can be used natively with hardware without translations.
-
-#### Future work:
- - ndindex - distributed index to represent all the distributed and sparse nd array data as a single sparse ndarray for search and retrieval.
 
 ## Execution Engine
 
