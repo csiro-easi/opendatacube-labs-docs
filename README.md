@@ -1,3 +1,8 @@
+> This repository is no longer maintained here.
+> Further development occurs in https://dev.azure.com/csiro-easi/easi-hub.
+
+----
+
 [ee]: https://github.com/csiro-easi/opendatacube-labs-docs/blob/master/images/Execution_Engine.png "Execution Engine (EE)"
 [s3aio]: https://github.com/csiro-easi/opendatacube-labs-docs/blob/master/images/S3AIO.png "S3 Array IO (s3aio)"
 
